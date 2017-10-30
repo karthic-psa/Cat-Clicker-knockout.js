@@ -73,7 +73,6 @@ var ViewModel = function(){
   };
 
   this.displayCat = function(catSel){
-    console.log("click");
     self.curCat(catSel);
   };
 
