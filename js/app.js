@@ -1,3 +1,37 @@
+var allCats = {
+  cats: [
+      {
+          clicks : 0,
+          name : 'Tabby',
+          imgSrc : 'img/cat1.jpg',
+          nicknames:['A','B','C'],
+      },
+      {
+          clicks : 0,
+          name : 'Tiger',
+          imgSrc : 'img/cat2.jpg',
+          nicknames:['D','B','C'],
+      },
+      {
+          clicks : 0,
+          name : 'Scaredy',
+          imgSrc : 'img/cat3.jpg',
+          nicknames:['E','B','C'],
+      },
+      {
+          clicks : 0,
+          name : 'Shadow',
+          imgSrc : 'img/cat4.jpg',
+          nicknames:['F','B','C'],
+      },
+      {
+          clicks : 0,
+          name : 'Sleepy',
+          imgSrc : 'img/cat5.jpg',
+          nicknames:['G','B','C'],
+      }
+  ]
+};
 var Cat = function(data){
   this.name = ko.observable(data.name);
   this.clicks = ko.observable(data.clicks);
@@ -26,14 +60,21 @@ var Cat = function(data){
 
 var ViewModel = function(){
   var self = this;
-  this.curCat = ko.observable(new Cat({
-    name:'Mewtwo',
-    clicks:0,
-    imgSrc:'img/cat1.jpg',
-    nicknames:['A','B','C']
-  }));
+
+  this.listCats = ko.observableArray([])
+
+  allCats.cats.forEach(function(catItem){
+    self.listCats.push(new Cat(catItem));
+  });
+
+  this.curCat = ko.observable(this.listCats()[0]);
   this.incCount = function(){
     self.curCat().clicks(self.curCat().clicks()+1);
+  };
+
+  this.displayCat = function(catSel){
+    console.log("click");
+    self.curCat(catSel);
   };
 
 };
