@@ -6,10 +6,9 @@
 </head>
 <body>
     <ul id="cat-list" data-bind="foreach: listCats">
-      <li id ="clist" data-bind="text: name, click: $parent.displayCat"></li>
+      <li id ="clist" style="cursor: pointer;" data-bind="text: name, click: $parent.displayCat"></li>
     </ul>
     <div id="cat" data-bind="with: curCat">
-
         <h2 id="cat-name" data-bind="text: name"></h2>
         <div id="cat-count" data-bind="text: clicks"></div>
         <h3 id="cat-title" data-bind="text: level"></h3>
