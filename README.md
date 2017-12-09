@@ -2,7 +2,7 @@
 ## Project Description ##
 A simple single page cat clicker application using **knockout.js**.
 
-###Visuals###
+### Visuals ###
 The application displays:
 
 1. a list of cats by name
@@ -16,10 +16,10 @@ In the cat display area, the following are displayed:
 3. text showing the number of clicks
 
 
-###Interaction###
+### Interaction ###
 1. When a cat name is clicked in the list, the cat display area is updated to show the data for the selected cat.
 2. The number of clicks in the cat area sis unique to each cat, and increments when the cat's picture is clicked.
 3. The list of nicknames of the selected cat are displayed at the bottom.
 
-###Instructions:###
+### Instructions: ###
 Clone the repo or download the zip and open ```index.html```
