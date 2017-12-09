@@ -20,3 +20,6 @@ In the cat display area, the following are displayed:
 *When a cat name is clicked in the list, the cat display area is updated to show the data for the selected cat.
 *The number of clicks in the cat area sis unique to each cat, and increments when the cat's picture is clicked.
 *The list of nicknames of the selected cat are displayed at the bottom.
+
+###Instructions:
+Clone the repo or download the zip and open ```index.html```
