@@ -55,14 +55,11 @@ var Cat = function(data){
     }
     return level;
   }, this);
-
 }
 
 var ViewModel = function(){
   var self = this;
-
   this.listCats = ko.observableArray([])
-
   allCats.cats.forEach(function(catItem){
     self.listCats.push(new Cat(catItem));
   });
@@ -75,7 +72,6 @@ var ViewModel = function(){
   this.displayCat = function(catSel){
     self.curCat(catSel);
   };
-
 };
 
 ko.applyBindings(new ViewModel());
